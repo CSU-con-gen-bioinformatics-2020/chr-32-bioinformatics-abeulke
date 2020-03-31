@@ -17,7 +17,7 @@
 # that I have shared with everyone in the class already
 
 # If I had needed to download this, I would have used a command like this:
-rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-con-gen-2020/pre-indexed-chinook-genome  pre-indexed-chinook-genome
+#rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-con-gen-2020/pre-indexed-chinook-genome  pre-indexed-chinook-genome
 
 # You would need to modify that for your own system.
 
@@ -29,7 +29,7 @@ rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-
 # use the --tps-limit 19 and --fast-list options.
 
 # Here is how I did it:
-rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-con-gen-2020/fastqs-chr32-160-chinook-8-lanes  fastqs-chr32-160-chinook-8-lanes
+rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive:CSU-con-gen-2020/fastqs-chr32-160-chinook-8-lanes  fastqs-chr32-160-chinook-8-lanes
 
 
 
@@ -38,22 +38,22 @@ rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-
 # and rename it to "genome" (or make a Symbolic link).
 
 # Here is what I did (making a symbolic link)
-ln -s /home/eanderson/scratch/chinook-play/chinook-genome-idx genome
+#ln -s /home/eanderson/scratch/chinook-play/chinook-genome-idx genome
 
 # You will have to modify this to reflect the proper location of the
 # directory on your system.
-
+ln -s /hb/home/abeulke/scratch/chinook-play/chinook-genome-idx genome
 
 # 4. Move (or make a symbolic link), the directory fastqs-chr32-160-chinook-8-lanes containing
 # all the gzipped FASTQ files into a directory named "fastqs" in this repository directory.
 
 # Here is what I did (making a symbolic link)
-ln -s  /home/eanderson/scratch/course_stuff/fastqs-chr32-160-chinook-8-lanes fastqs
+#ln -s  /home/eanderson/scratch/course_stuff/fastqs-chr32-160-chinook-8-lanes fastqs
 
 # You will have to modify this to reflect the proper location of the
 # directory on your system.
 
-
+ln -s /hb/home/abeulke/scratch/chr-32-bioinformatics-abeulke/fastqs-chr32-160-chinook-8-lanes fastqs
 
 
 # With all of this in place.  You are ready to get an interactive
